@@ -10,6 +10,7 @@ class App < Sinatra::Base
   end
 
   get '/make_puppy' do
+    binding.pry
     @newpuppy = Puppy.new(params["name"], params["breed"], params["age"])
     erb :display_puppy
   end
